@@ -1,0 +1,20 @@
+program frmBooking_p;
+
+uses
+  Forms,
+  frmBooking_u in 'frmBooking_u.pas' {frmBooking},
+  dmBooking_u in 'dmBooking_u.pas' {dmBooking: TDataModule},
+  frmArtist_u in 'frmArtist_u.pas' {frmArtist},
+  dnArtist_u in 'dnArtist_u.pas' {data: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmBooking, frmBooking);
+  Application.CreateForm(TdmBooking, dmBooking);
+  Application.CreateForm(TfrmArtist, frmArtist);
+  Application.CreateForm(Tdata, data);
+  Application.Run;
+end.

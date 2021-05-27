@@ -1,0 +1,30 @@
+object dmBooking: TdmBooking
+  OldCreateOrder = False
+  Height = 288
+  Width = 420
+  object conBooking: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ayrton Bal' +
+      'onga\Desktop\Pat2017\Abbotts Live.mdb;Mode=ReadWrite;Persist Sec' +
+      'urity Info=False'
+    LoginPrompt = False
+    Mode = cmReadWrite
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 104
+    Top = 80
+  end
+  object tblBooking: TADOTable
+    Active = True
+    Connection = conBooking
+    CursorType = ctStatic
+    TableName = 'Booking'
+    Left = 296
+    Top = 88
+  end
+  object dsrBooking: TDataSource
+    DataSet = tblBooking
+    Left = 264
+    Top = 200
+  end
+end
